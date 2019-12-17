@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改</title>
+    <style>
+        p{  
+            width: 250px;
+            height: 30px;
+            text-align: center;
+            color: #ffffff;
+            background: #A7C942;
+            line-height: 30px;
+        }
+        input{
+            padding: 0;
+            margin: 0;
+            border: 1px solid rgb(180, 180, 180);
+            list-style: none;
+            width: 248px;
+            height: 28px;
+        }
+        .sub{
+            width: 250px;
+            height: 30px;
+            text-align: center;
+            color: #ffffff;
+            background: #A7C942;
+            line-height: 30px;
+            margin-top: 20px;
+            border:none;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://localhost:5000/edit" method="post">
+        <input type="hidden" name="id" value="{{ infomation._id }}">
+        <p>你的大名</p>
+        <input type="text" name="name" autocomplete="off" value="{{ infomation.name }}"><br>
+        <p>你要说啥</p>
+        <input type="text" name="word" autocomplete="off" value="{{ infomation.word }}"><br>
+        <input type="submit" value="确认修改" class="sub">
+    </form>
+</body>
+</html>
